@@ -6,7 +6,43 @@ using System.Threading.Tasks;
 
 namespace Assignment
 {
-    internal class Customer
+    class Customer
     {
+        public string Name { get; set; }
+        public int MemberId { get; set; }
+        public DateTime Dob { get; set; }
+        public Order CurrentOrder { get; set; }
+        public List<Order> OrderHistory { get; set; }
+        public PointCard rewards { get; set; }
+
+
+        public Customer() { }
+        public Customer(string n, int id, DateTime dob)
+        {
+            Name = n;
+            MemberId = id;
+            Dob = dob;
+        }
+
+        public Order MakeOrder()
+        {
+
+        }
+
+        public bool IsBirthday()
+        {
+
+        }
+
+        public override string ToString()
+        {
+            return "Name: " + Name +
+                  " MemberID: " + MemberId +
+                  " DOB: " + Dob +
+                  " Current Order: " + CurrentOrder +
+                  " Order History: " + OrderHistory +
+                  " Rewards: " + rewards;
+        }
+
     }
 }
