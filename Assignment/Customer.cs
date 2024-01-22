@@ -26,12 +26,14 @@ namespace Assignment
 
         public Order MakeOrder()
         {
-
+            Order newOrder = new Order();
+            CurrentOrder = newOrder;
+            return newOrder;
         }
 
         public bool IsBirthday()
         {
-
+            return DateTime.Today == Dob.Date;
         }
 
         public override string ToString()
