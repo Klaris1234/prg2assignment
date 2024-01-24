@@ -22,14 +22,7 @@ namespace Assignment
         }
         public void ModifyIceCream(int index)
         {
-            /*if (iceCreamIndex >= 0 && iceCreamIndex < IceCreamList.Count)
-             {
-                 IceCreamList[iceCreamIndex] = modifiedIceCream;
-             }
-             else
-             {
-                 // Handle index out of range error
-             }*/
+            // it will be implemented later
         }
 
         public void AddIceCream(IceCream newIceCream)
