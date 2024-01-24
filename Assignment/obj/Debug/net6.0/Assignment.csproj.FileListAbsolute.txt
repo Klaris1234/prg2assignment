@@ -12,3 +12,18 @@ C:\Users\yulin\OneDrive - Ngee Ann Polytechnic\NP\semester 2 2023\PRG 2\Assignme
 C:\Users\yulin\OneDrive - Ngee Ann Polytechnic\NP\semester 2 2023\PRG 2\Assignment\Assignment\obj\Debug\net6.0\Assignment.pdb
 C:\Users\yulin\OneDrive - Ngee Ann Polytechnic\NP\semester 2 2023\PRG 2\Assignment\Assignment\obj\Debug\net6.0\Assignment.genruntimeconfig.cache
 C:\Users\yulin\OneDrive - Ngee Ann Polytechnic\NP\semester 2 2023\PRG 2\Assignment\Assignment\obj\Debug\net6.0\ref\Assignment.dll
+C:\Users\Jason Lim\Documents\NP\Sem 2\PRG2\Assignment\assignment\Assignment\obj\Debug\net6.0\Assignment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jason Lim\Documents\NP\Sem 2\PRG2\Assignment\assignment\Assignment\obj\Debug\net6.0\Assignment.AssemblyInfoInputs.cache
+C:\Users\Jason Lim\Documents\NP\Sem 2\PRG2\Assignment\assignment\Assignment\obj\Debug\net6.0\Assignment.AssemblyInfo.cs
+C:\Users\Jason Lim\Documents\NP\Sem 2\PRG2\Assignment\assignment\Assignment\obj\Debug\net6.0\Assignment.csproj.CoreCompileInputs.cache
+C:\Users\Jason Lim\Documents\NP\Sem 2\PRG2\Assignment\assignment\Assignment\obj\Debug\net6.0\Assignment.dll
+C:\Users\Jason Lim\Documents\NP\Sem 2\PRG2\Assignment\assignment\Assignment\obj\Debug\net6.0\refint\Assignment.dll
+C:\Users\Jason Lim\Documents\NP\Sem 2\PRG2\Assignment\assignment\Assignment\obj\Debug\net6.0\Assignment.pdb
+C:\Users\Jason Lim\Documents\NP\Sem 2\PRG2\Assignment\assignment\Assignment\bin\Debug\net6.0\Assignment.exe
+C:\Users\Jason Lim\Documents\NP\Sem 2\PRG2\Assignment\assignment\Assignment\bin\Debug\net6.0\customers.csv
+C:\Users\Jason Lim\Documents\NP\Sem 2\PRG2\Assignment\assignment\Assignment\bin\Debug\net6.0\Assignment.deps.json
+C:\Users\Jason Lim\Documents\NP\Sem 2\PRG2\Assignment\assignment\Assignment\bin\Debug\net6.0\Assignment.runtimeconfig.json
+C:\Users\Jason Lim\Documents\NP\Sem 2\PRG2\Assignment\assignment\Assignment\bin\Debug\net6.0\Assignment.dll
+C:\Users\Jason Lim\Documents\NP\Sem 2\PRG2\Assignment\assignment\Assignment\bin\Debug\net6.0\Assignment.pdb
+C:\Users\Jason Lim\Documents\NP\Sem 2\PRG2\Assignment\assignment\Assignment\obj\Debug\net6.0\Assignment.genruntimeconfig.cache
+C:\Users\Jason Lim\Documents\NP\Sem 2\PRG2\Assignment\assignment\Assignment\obj\Debug\net6.0\ref\Assignment.dll

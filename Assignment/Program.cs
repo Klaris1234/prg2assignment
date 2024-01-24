@@ -1,12 +1,13 @@
 ﻿using Assignment;
 
-List<Customer> customers = new List<Customer>();
+List<Customer> customersList = new List<Customer>();
 List<Order> orders = new List<Order>();
 
-    // Load data from files
-    LoadCustomersFromFile("customers.csv");
+// Read data from files
+CustomersFile("customers.csv");
+Console.WriteLine("customerlist=" + customersList);
 
-    int option;
+int option;
     do
     {
         DisplayMenu();
@@ -18,7 +19,7 @@ List<Order> orders = new List<Order>();
         }
         else if (option == 2)
         {
-            ListAllCurrentOrders();
+            //ListAllCurrentOrders();
         }
         else if (option == 0)
         {
@@ -56,28 +57,37 @@ int GetOption()
     }
 }
 
-
-
-void LoadCustomersFromFile(string filePath)
+void CustomersFile(string filePath)
 {
-    // load customers from a CSV file
     try
     {
-        var lines = File.ReadAllLines(filePath);
-        foreach (var line in lines.Skip(1))
+        using (StreamReader sr = new StreamReader("customers.csv"))
         {
-            var values = line.Split(',');
-            string name = values[0];
-            int memberId = int.Parse(values[1]);
-            DateTime dob = DateTime.Parse(values[2]);
-
-            customers.Add(new Customer(name, memberId, dob));
+            string header = sr.ReadLine();
+            while (!sr.EndOfStream)
+            {
+                string line = sr.ReadLine();
+                string[] data = line.Split(',');
+                string Name = data[0];
+                int MemberId = Convert.ToInt32(data[1]);
+                DateTime Dob = Convert.ToDateTime(data[2]);
+                customersList.Add(new Customer(Name, MemberId, Dob));
+            }
         }
-
-        Console.WriteLine("Customers loaded successfully.");
     }
+
     catch (Exception e)
     {
         Console.WriteLine($"Error loading customers: {e.Message}");
     }
+}
+
+void ListAllCustomers() 
+{
+    Console.WriteLine("{0,-15} {1,-12} {2,-10}", "Name", "Member ID", "DOB");
+    foreach (Customer s in customersList)
+    {
+        Console.WriteLine("{0,-15} {1,-12} {2,-10}", s.Name, s.MemberId, s.Dob.ToString("dd/MM/yyyy"));
+    }
+    Console.WriteLine();
 }
