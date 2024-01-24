@@ -20,9 +20,9 @@ namespace Assignment
             Id = id;
             TimeRecieved = timeR;
         }
-        public ModifyIceCream(int //gfhf)
+        public void ModifyIceCream(int index)
         {
-            /* if (iceCreamIndex >= 0 && iceCreamIndex < IceCreamList.Count)
+            /*if (iceCreamIndex >= 0 && iceCreamIndex < IceCreamList.Count)
              {
                  IceCreamList[iceCreamIndex] = modifiedIceCream;
              }
@@ -32,12 +32,12 @@ namespace Assignment
              }*/
         }
 
-        public AddIceCream(IceCream newIceCream)
+        public void AddIceCream(IceCream newIceCream)
         {
             IceCreamList.Add(newIceCream);
         }
 
-        public DeleteIceCream(int index)
+        public void DeleteIceCream(int index)
         {
             if (index >= 0 && index < IceCreamList.Count)
             {
@@ -56,7 +56,7 @@ namespace Assignment
             double total = 0.0;
             foreach (var iceCream in IceCreamList)
             {
-                total += iceCream.Price;
+                total += iceCream.CalculatePrice();
             }
             return total;
         }

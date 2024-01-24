@@ -18,20 +18,28 @@ namespace Assignment
             Points = p;
             PunchCard = card;
         }
-        public AddPoints(int Points)
+
+        int Total = 0;
+
+        public void AddPoints(int Points)
         {
-            Points += Math.Floor(Total * 0.72);
+            Points += Convert.ToInt32(Math.Floor(Total * 0.72));
         }
 
-        public RedeemPoints(int Points)
+        public double RedeemPoints(int Points)
         {
             if (Tier == "Silver" || Tier == "Gold")
             {
-                double offsetamt = Points * 0.02;
-                return offsetamt;
+                double offsetAmt = Points * 0.02;
+                return offsetAmt;
 
             }
-            else { return false; }
+            else { return 0.0; } // Return appropriate value for non-Silver or non-Gold tiers
+        }
+
+        private void AddFreeIceCream()
+        {
+            // Implementation for adding free ice cream
         }
 
         public void Punch()
