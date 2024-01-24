@@ -12,7 +12,7 @@ namespace Assignment
         public int MemberId { get; set; }
         public DateTime Dob { get; set; }
         public Order CurrentOrder { get; set; }
-        public List<Order> OrderHistory { get; set; }
+        public List<Order> OrderHistory { get; set; } = new List<Order>();
         public PointCard rewards { get; set; }
 
 
@@ -40,10 +40,7 @@ namespace Assignment
         {
             return "Name: " + Name +
                   " MemberID: " + MemberId +
-                  " DOB: " + Dob +
-                  " Current Order: " + CurrentOrder +
-                  " Order History: " + OrderHistory +
-                  " Rewards: " + rewards;
+                  " DOB: " + Dob;
         }
 
     }

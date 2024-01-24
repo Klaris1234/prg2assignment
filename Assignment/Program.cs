@@ -1,4 +1,5 @@
 ﻿using Assignment;
+using System.Globalization;
 
 List<Customer> customers = new List<Customer>();
 List<Order> orders = new List<Order>();
@@ -58,26 +59,3 @@ int GetOption()
 
 
 
-void LoadCustomersFromFile(string filePath)
-{
-    // load customers from a CSV file
-    try
-    {
-        var lines = File.ReadAllLines(filePath);
-        foreach (var line in lines.Skip(1))
-        {
-            var values = line.Split(',');
-            string name = values[0];
-            int memberId = int.Parse(values[1]);
-            DateTime dob = DateTime.Parse(values[2]);
-
-            customers.Add(new Customer(name, memberId, dob));
-        }
-
-        Console.WriteLine("Customers loaded successfully.");
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine($"Error loading customers: {e.Message}");
-    }
-}
