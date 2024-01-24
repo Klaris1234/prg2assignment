@@ -27,3 +27,4 @@ C:\Users\Jason Lim\Documents\NP\Sem 2\PRG2\Assignment\assignment\Assignment\bin\
 C:\Users\Jason Lim\Documents\NP\Sem 2\PRG2\Assignment\assignment\Assignment\bin\Debug\net6.0\Assignment.pdb
 C:\Users\Jason Lim\Documents\NP\Sem 2\PRG2\Assignment\assignment\Assignment\obj\Debug\net6.0\Assignment.genruntimeconfig.cache
 C:\Users\Jason Lim\Documents\NP\Sem 2\PRG2\Assignment\assignment\Assignment\obj\Debug\net6.0\ref\Assignment.dll
+C:\Users\yulin\OneDrive - Ngee Ann Polytechnic\NP\semester 2 2023\PRG 2\Assignment\Assignment\bin\Debug\net6.0\customers.csv

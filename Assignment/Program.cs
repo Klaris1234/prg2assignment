@@ -1,11 +1,14 @@
 ﻿using Assignment;
 
 List<Customer> customersList = new List<Customer>();
-List<Order> orders = new List<Order>();
+List<Order> ordersList = new List<Order>();
 
 // Read data from files
 CustomersFile("customers.csv");
 Console.WriteLine("customerlist=" + customersList);
+
+OrdersFile("orders.csv");
+Console.WriteLine("ordersList=" + ordersList);
 
 int option;
     do
@@ -19,7 +22,7 @@ int option;
         }
         else if (option == 2)
         {
-            //ListAllCurrentOrders();
+            ListAllCurrentOrders();
         }
         else if (option == 0)
         {
@@ -82,6 +85,30 @@ void CustomersFile(string filePath)
     }
 }
 
+void OrdersFile(string filePath)
+{
+    try
+    {
+        using (StreamReader sr = new StreamReader("orders.csv"))
+        {
+            string header = sr.ReadLine();
+            while (!sr.EndOfStream)
+            {
+                string line = sr.ReadLine();
+                string[] data = line.Split(',');
+                int id = Convert.ToInt32(data[1]);
+                DateTime receive = Convert.ToDateTime(data[2]);
+                ordersList.Add(new Order(id, receive));
+            }
+        }
+    }
+
+    catch (Exception e)
+    {
+        Console.WriteLine($"Error loading customers: {e.Message}");
+    }
+}
+
 void ListAllCustomers() 
 {
     Console.WriteLine("{0,-15} {1,-12} {2,-10}", "Name", "Member ID", "DOB");
@@ -90,4 +117,33 @@ void ListAllCustomers()
         Console.WriteLine("{0,-15} {1,-12} {2,-10}", s.Name, s.MemberId, s.Dob.ToString("dd/MM/yyyy"));
     }
     Console.WriteLine();
+}
+
+void ListAllCurrentOrders()
+{
+    Console.WriteLine("{0,-15} {1,-12} {2,-15}", "Membership", "Member ID", "Time Received");
+
+    foreach (var order in ordersList)
+    {
+        string membershipStatus = GetMembershipStatus(order.Id);
+
+        Console.WriteLine("{0,-15} {1,-12} {2,-15}", membershipStatus, order.Id, order.TimeRecieved.ToString("dd/MM/yyyy HH:mm"));
+    }
+
+    Console.WriteLine();
+}
+
+string GetMembershipStatus(int memberId)
+{
+    if (memberId != 0) // Assuming MemberId of 0 represents non-registered customers
+    {
+        Customer customer = customersList.Find(c => c.MemberId == memberId);
+
+        if (customer != null && customer.rewards != null)
+        {
+            return customer.rewards.Tier;
+        }
+    }
+
+    return "Regular";
 }

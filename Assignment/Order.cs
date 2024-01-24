@@ -15,10 +15,10 @@ namespace Assignment
         public List<IceCream> IceCreamList { get; set; }
 
         public Order() { }
-        public Order(int id, DateTime timeR)
+        public Order(int id, DateTime timeReceived)
         {
             Id = id;
-            TimeRecieved = timeR;
+            IceCreamList = new List<IceCream>();
         }
         public void ModifyIceCream(int index)
         {
