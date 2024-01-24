@@ -10,15 +10,17 @@ namespace Assignment
     class Order
     {
         public int Id { get; set; }
-        public DateTime TimeRecieved { get; set; }
-        public DateTime? TimeFulfilled { get; set; }
+        public DateTime TimeReceived { get; set; }
+        public DateTime TimeFulfilled { get; set; }
         public List<IceCream> IceCreamList { get; set; }
+
 
         public Order() { }
         public Order(int id, DateTime timeReceived)
         {
             Id = id;
-            IceCreamList = new List<IceCream>();
+            TimeReceived = timeReceived;
+            
         }
         public void ModifyIceCream(int index)
         {
@@ -57,9 +59,7 @@ namespace Assignment
         public override string ToString()
         {
             return "ID:" + Id +
-                  " Time Recieved: " + TimeRecieved +
-                  " Time Fulfilled: " + TimeFulfilled +
-                  " Ice Cream List: " + IceCreamList;
+                  " /tTime Recieved: " + TimeReceived;
         }
 
     }

@@ -125,9 +125,9 @@ void ListAllCurrentOrders()
 
     foreach (var order in ordersList)
     {
-        string membershipStatus = GetMembershipStatus(order.Id);
+        string membershipStatus = GetMembershipStatus(order.Id); // Assuming the rewards tier is correctly determined
 
-        Console.WriteLine("{0,-15} {1,-12} {2,-15}", membershipStatus, order.Id, order.TimeRecieved.ToString("dd/MM/yyyy HH:mm"));
+        Console.WriteLine("{0,-15} {1,-12} {2,-15}", membershipStatus, order.Id, order.TimeReceived.ToString("dd/MM/yyyy HH:mm"));
     }
 
     Console.WriteLine();
@@ -135,15 +135,20 @@ void ListAllCurrentOrders()
 
 string GetMembershipStatus(int memberId)
 {
-    if (memberId != 0) // Assuming MemberId of 0 represents non-registered customers
-    {
-        Customer customer = customersList.Find(c => c.MemberId == memberId);
+    Customer customer = customersList.Find(c => c.MemberId == memberId);
 
-        if (customer != null && customer.rewards != null)
+    if (customer != null && customer.rewards != null)
+    {
+        if (customer.rewards.Tier == "Gold" || customer.rewards.Tier == "Silver")
         {
             return customer.rewards.Tier;
         }
+        else
+        {
+            return "Ordinary";
+        }
     }
 
-    return "Regular";
+    return "Ordinary";
 }
+
